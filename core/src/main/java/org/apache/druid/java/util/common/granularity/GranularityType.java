@@ -181,27 +181,26 @@ public enum GranularityType
     return false;
   }
 
-  /**
-   * Note: This is only an estimate based on the values in period.
-   * This will not work for complicated periods that represent say 1 year 1 day
-   */
-  public static GranularityType fromPeriod(Period period)
-  {
-    int[] vals = period.getValues();
-    int index = -1;
-    for (int i = 0; i < vals.length; i++) {
-      if (vals[i] != 0) {
-        if (index < 0) {
-          index = i;
-        } else {
-          throw new IAE("Granularity is not supported. [%s]", period);
-        }
-      }
-    }
-
+  public static GranularityType cases1(int index, int[] vals, Period period)
+  {  
     switch (index) {
       case 0:
         return GranularityType.YEAR;
+      case 2:
+        return GranularityType.WEEK;
+      case 3:
+        return GranularityType.DAY;
+      case 6:
+        return GranularityType.SECOND;
+      default:
+        break;
+    }
+    throw new IAE("Granularity is not supported. [%s]", period);
+  }
+
+  public static GranularityType cases2(int index, int[] vals, Period period)
+  { 
+    switch (index) {
       case 1:
         if (vals[index] == 3) {
           return GranularityType.QUARTER;
@@ -209,10 +208,6 @@ public enum GranularityType
           return GranularityType.MONTH;
         }
         break;
-      case 2:
-        return GranularityType.WEEK;
-      case 3:
-        return GranularityType.DAY;
       case 4:
         if (vals[index] == 6) {
           return GranularityType.SIX_HOUR;
@@ -233,10 +228,36 @@ public enum GranularityType
           return GranularityType.MINUTE;
         }
         break;
-      case 6:
-        return GranularityType.SECOND;
       default:
         break;
+    }
+    throw new IAE("Granularity is not supported. [%s]", period);
+  } 
+
+
+
+  /**
+   * Note: This is only an estimate based on the values in period.
+   * This will not work for complicated periods that represent say 1 year 1 day
+   */
+  public static GranularityType fromPeriod(Period period)
+  {
+    int[] vals = period.getValues();
+    int index = -1;
+    for (int i = 0; i < vals.length; i++) {
+      if (vals[i] != 0) {
+        if (index < 0) {
+          index = i;
+        } else {
+          throw new IAE("Granularity is not supported. [%s]", period);
+        }
+      }
+    }
+
+    if (index == 0 || index == 2 || index == 3 || index == 6) {
+      return cases1(index, vals, period);
+    } else if (index == 1 || index == 4 || index == 5) {
+      return cases2(index, vals, period);
     }
     throw new IAE("Granularity is not supported. [%s]", period);
   }
@@ -256,3 +277,4 @@ public enum GranularityType
     return defaultFormat;
   }
 }
+
