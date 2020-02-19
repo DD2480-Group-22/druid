@@ -78,6 +78,15 @@ class Batch extends AbstractQueuedLongSynchronizer
   private static final long UNLOCK_AND_SEAL_TAG = 1;
   private static final long SEAL_TAG = 2;
 
+  public static boolean[] branch = {false, false, false, false, false};
+  
+  public static void printBranch() {
+    for(int i = 0; i < 5; ++i) {
+      System.out.print(i+":"+branch[i]+", ");
+    }
+    System.out.println();
+  }
+  
   /**
    * The emitter this batch belongs to.
    */
@@ -328,13 +337,18 @@ class Batch extends AbstractQueuedLongSynchronizer
   @Override
   protected boolean tryReleaseShared(long tag)
   {
+    branch[0] = True;
     if (tag == UNLOCK_TAG) {
+      branch[1] = True;
       return unlockTag();
     } else if (tag == UNLOCK_AND_SEAL_TAG) {
+      branch[2] = True;
       return unlockAndSealTag();
     } else if (tag == SEAL_TAG) {
+      branch[3] = True;
       return sealTag();
     } else {
+      branch[4] = True;
       throw new IllegalStateException("Unknown tag: " + tag);
     }
   }
