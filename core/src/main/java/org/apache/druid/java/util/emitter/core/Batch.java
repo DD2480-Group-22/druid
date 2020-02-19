@@ -261,64 +261,79 @@ class Batch extends AbstractQueuedLongSynchronizer
   {
     releaseShared(SEAL_TAG);
   }
-
-  @Override
-  protected boolean tryReleaseShared(long tag)
+  
+  private boolean unlockTag()
   {
-    if (tag == UNLOCK_TAG) {
-      while (true) {
-        long state = getState();
-        int parties = parties(state);
-        if (parties == 0) {
-          throw new IllegalMonitorStateException();
-        }
-        long newState = state - PARTY;
-        if (compareAndSetState(state, newState)) {
-          return isEmittingAllowed(newState);
-        }
+    while (true) {
+      long state = getState();
+      int parties = parties(state);
+      if (parties == 0) {
+        throw new IllegalMonitorStateException();
       }
-    } else if (tag == UNLOCK_AND_SEAL_TAG) {
-      while (true) {
-        long state = getState();
-        int parties = parties(state);
-        if (parties == 0) {
-          throw new IllegalMonitorStateException();
-        }
-        long newState = (state - PARTY) | SEAL_BIT;
-        if (compareAndSetState(state, newState)) {
-          // Ensures only one thread calls emitter.onSealExclusive() for each batch.
-          if (!isSealed(state)) {
-            log.debug("Unlocked and sealed batch [%d]", batchNumber);
-            debugLogState("old state", state);
-            debugLogState("new state", newState);
-            emitter.onSealExclusive(
-                this,
-                firstEventTimestamp > 0 ? System.currentTimeMillis() - firstEventTimestamp : -1
-            );
-          }
-          return isEmittingAllowed(newState);
-        }
+      long newState = state - PARTY;
+      if (compareAndSetState(state, newState)) {
+        return isEmittingAllowed(newState);
       }
-    } else if (tag == SEAL_TAG) {
-      while (true) {
-        long state = getState();
-        if (isSealed(state)) {
-          // Returning false, despite acquisition could be possible now, because this thread actually didn't update the
-          // state, i. e. didn't "release" in AbstractQueuedLongSynchronizer's terms.
-          return false;
-        }
-        long newState = state | SEAL_BIT;
-        if (compareAndSetState(state, newState)) {
-          log.debug("Sealed batch [%d]", batchNumber);
+    }
+  }
+  
+  private boolean unlockAndSealTag()
+  {
+    while (true) {
+      long state = getState();
+      int parties = parties(state);
+      if (parties == 0) {
+        throw new IllegalMonitorStateException();
+      }
+      long newState = (state - PARTY) | SEAL_BIT;
+      if (compareAndSetState(state, newState)) {
+        // Ensures only one thread calls emitter.onSealExclusive() for each batch.
+        if (!isSealed(state)) {
+          log.debug("Unlocked and sealed batch [%d]", batchNumber);
           debugLogState("old state", state);
           debugLogState("new state", newState);
           emitter.onSealExclusive(
               this,
               firstEventTimestamp > 0 ? System.currentTimeMillis() - firstEventTimestamp : -1
           );
-          return isEmittingAllowed(newState);
         }
+        return isEmittingAllowed(newState);
       }
+    }
+  }
+  
+  private boolean sealTag()
+  {
+    while (true) {
+      long state = getState();
+      if (isSealed(state)) {
+        // Returning false, despite acquisition could be possible now, because this thread actually didn't update the
+        // state, i. e. didn't "release" in AbstractQueuedLongSynchronizer's terms.
+        return false;
+      }
+      long newState = state | SEAL_BIT;
+      if (compareAndSetState(state, newState)) {
+        log.debug("Sealed batch [%d]", batchNumber);
+        debugLogState("old state", state);
+        debugLogState("new state", newState);
+        emitter.onSealExclusive(
+            this,
+            firstEventTimestamp > 0 ? System.currentTimeMillis() - firstEventTimestamp : -1
+        );
+        return isEmittingAllowed(newState);
+      }
+    }
+  }
+
+  @Override
+  protected boolean tryReleaseShared(long tag)
+  {
+    if (tag == UNLOCK_TAG) {
+      return unlockTag();
+    } else if (tag == UNLOCK_AND_SEAL_TAG) {
+      return unlockAndSealTag();
+    } else if (tag == SEAL_TAG) {
+      return sealTag();
     } else {
       throw new IllegalStateException("Unknown tag: " + tag);
     }
