@@ -75,8 +75,52 @@ public class MetadataStorageConnectorConfigTest
         "user",
         "\"nothing\""
     );
+    
+    MetadataStorageConnectorConfig msccCrafted1 = new MetadataStorageConnectorConfig()
+    {
+      @Override
+      public String getHost()
+      {
+        return "mock";
+      }
+    };
+    
+    MetadataStorageConnectorConfig msccCrafted2 = new MetadataStorageConnectorConfig()
+    {
+      @Override
+      public boolean isCreateTables()
+      {
+        return false;
+      }
+    };
+    
+    MetadataStorageConnectorConfig msccCrafted3 = new MetadataStorageConnectorConfig()
+    {
+      @Override
+      public String getUser()
+      {
+        return "mock";
+      }
+    };
+    
+    MetadataStorageConnectorConfig msccCrafted4 = new MetadataStorageConnectorConfig()
+    {
+      @Override
+      public String getConnectURI()
+      {
+        return "mock";
+      }
+    };
+    
+    String msccCrafted5 = "mock";
+    
     Assert.assertTrue(metadataStorageConnectorConfig.equals(metadataStorageConnectorConfig2));
     Assert.assertTrue(metadataStorageConnectorConfig.hashCode() == metadataStorageConnectorConfig2.hashCode());
+    Assert.assertFalse(metadataStorageConnectorConfig.equals(msccCrafted1));
+    Assert.assertFalse(metadataStorageConnectorConfig.equals(msccCrafted2));
+    Assert.assertFalse(metadataStorageConnectorConfig.equals(msccCrafted3));
+    Assert.assertFalse(metadataStorageConnectorConfig.equals(msccCrafted4));
+    Assert.assertFalse(metadataStorageConnectorConfig.equals(msccCrafted5));
   }
 
   private static final ObjectMapper JSON_MAPPER = new ObjectMapper();

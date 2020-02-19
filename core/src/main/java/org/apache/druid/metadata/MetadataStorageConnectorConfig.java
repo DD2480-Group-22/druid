@@ -24,6 +24,7 @@ import org.apache.druid.java.util.common.StringUtils;
 
 import java.util.Properties;
 
+
 /**
  */
 public class MetadataStorageConnectorConfig
@@ -50,13 +51,6 @@ public class MetadataStorageConnectorConfig
   private Properties dbcpProperties;
 
   public static boolean[] branch = {false, false, false, false};
-  
-  public static void printBranch() {
-    for(int i = 0; i < 4; ++i) {
-      System.out.print(i+": "+branch[i]+", ");
-    }
-    System.out.println();
-  }
   
   public boolean isCreateTables()
   {
@@ -155,13 +149,13 @@ public class MetadataStorageConnectorConfig
   @Override
   public boolean equals(Object o)
   {
-    branch[0] = True;
+    branch[0] = true;
     if (this == o) {
-      branch[1] = True;
+      branch[1] = true;
       return true;
     }
     if (!(o instanceof MetadataStorageConnectorConfig)) {
-      branch[2] = True;
+      branch[2] = true;
       return false;
     }
 
@@ -174,7 +168,7 @@ public class MetadataStorageConnectorConfig
         checkGetUserNotEqual(that) &&
         checkGetDCBPropertiesNotEqual(that)
         ) {
-      branch[3] = True;
+      branch[3] = true;
       return false;
     }
     return checkPasswordProviderEqual(that);
