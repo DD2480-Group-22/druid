@@ -100,6 +100,49 @@ public class MetadataStorageConnectorConfig
            '}';
   }
 
+  private boolean checkGetHostNotEqual(MetadataStorageConnectorConfig o)
+  {
+    return getHost() != null ? !getHost().equals(o.getHost()) : o.getHost() != null;
+  }
+  
+  private boolean checkGetConnectUriNotEqual(MetadataStorageConnectorConfig o)
+  {
+    return getConnectURI() != null
+        ? !getConnectURI().equals(o.getConnectURI()) 
+        : o.getConnectURI() != null;
+  }
+  
+  private boolean checkGetUserNotEqual(MetadataStorageConnectorConfig o)
+  {
+    return getUser() != null 
+        ? !getUser().equals(o.getUser())
+        : o.getUser() != null;
+  }
+  
+  private boolean checkGetDCBPropertiesNotEqual(MetadataStorageConnectorConfig o)
+  {
+    return getDbcpProperties() == null
+        ? o.getDbcpProperties() != null
+        : !getDbcpProperties().equals(o.getDbcpProperties());
+  }
+  
+  private boolean checkPasswordProviderEqual(MetadataStorageConnectorConfig o)
+  {
+    return passwordProvider != null
+        ? passwordProvider.equals(o.passwordProvider)
+        : o.passwordProvider == null;
+  }
+  
+  private boolean checkIsCreateTablesNotEqual(MetadataStorageConnectorConfig o)
+  {
+    return isCreateTables() != o.isCreateTables();
+  }
+  
+  private boolean checkGetPortNotEqual(MetadataStorageConnectorConfig o)
+  {
+    return getPort() != o.getPort();
+  }
+  
   @Override
   public boolean equals(Object o)
   {
@@ -112,27 +155,16 @@ public class MetadataStorageConnectorConfig
 
     MetadataStorageConnectorConfig that = (MetadataStorageConnectorConfig) o;
 
-    if (isCreateTables() != that.isCreateTables()) {
+    if (checkIsCreateTablesNotEqual(that) &&
+        checkGetPortNotEqual(that) &&
+        checkGetHostNotEqual(that) &&
+        checkGetConnectUriNotEqual(that) &&
+        checkGetUserNotEqual(that) &&
+        checkGetDCBPropertiesNotEqual(that)
+        ) {
       return false;
     }
-    if (getPort() != that.getPort()) {
-      return false;
-    }
-    if (getHost() != null ? !getHost().equals(that.getHost()) : that.getHost() != null) {
-      return false;
-    }
-    if (getConnectURI() != null ? !getConnectURI().equals(that.getConnectURI()) : that.getConnectURI() != null) {
-      return false;
-    }
-    if (getUser() != null ? !getUser().equals(that.getUser()) : that.getUser() != null) {
-      return false;
-    }
-    if (getDbcpProperties() == null
-        ? that.getDbcpProperties() != null
-        : !getDbcpProperties().equals(that.getDbcpProperties())) {
-      return false;
-    }
-    return passwordProvider != null ? passwordProvider.equals(that.passwordProvider) : that.passwordProvider == null;
+    return checkPasswordProviderEqual(that);
 
   }
 
