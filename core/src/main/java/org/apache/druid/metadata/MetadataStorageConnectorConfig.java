@@ -53,7 +53,7 @@ public class MetadataStorageConnectorConfig
   
   public static void printBranch() {
     for(int i = 0; i < 4; ++i) {
-      System.out.print(i+":"+branch[i]+", ");
+      System.out.print(i+": "+branch[i]+", ");
     }
     System.out.println();
   }
