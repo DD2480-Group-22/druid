@@ -26,6 +26,7 @@ import com.google.common.collect.Iterators;
 import com.google.errorprone.annotations.concurrent.GuardedBy;
 import org.apache.druid.java.util.common.DateTimes;
 import org.apache.druid.java.util.common.UOE;
+import org.apache.druid.java.util.common.granularity.CoverageTool;
 import org.apache.druid.java.util.common.guava.Comparators;
 import org.apache.druid.timeline.partition.ImmutablePartitionHolder;
 import org.apache.druid.timeline.partition.PartitionChunk;
@@ -444,17 +445,25 @@ public class VersionedIntervalTimeline<VersionType, ObjectType extends Overshado
     try {
       TimelineEntry entry = completePartitionsTimeline.get(interval);
       if (entry != null) {
+        CoverageTool.setisOvershadowed(0);
         final int majorVersionCompare = versionComparator.compare(version, entry.getVersion());
         if (majorVersionCompare == 0) {
+          CoverageTool.setisOvershadowed(2);
           for (PartitionChunk<ObjectType> chunk : entry.partitionHolder) {
             if (chunk.getObject().overshadows(object)) {
+              CoverageTool.setisOvershadowed(4);
               return true;
+            } else {
+              CoverageTool.setisOvershadowed(5);
             }
           }
           return false;
         } else {
+          CoverageTool.setisOvershadowed(3);
           return majorVersionCompare < 0;
         }
+      } else {
+        CoverageTool.setisOvershadowed(1);
       }
 
       Interval lower = completePartitionsTimeline.floorKey(
@@ -462,7 +471,10 @@ public class VersionedIntervalTimeline<VersionType, ObjectType extends Overshado
       );
 
       if (lower == null || !lower.overlaps(interval)) {
+        CoverageTool.setisOvershadowed(6);
         return false;
+      } else {
+        CoverageTool.setisOvershadowed(7);
       }
 
       Interval prev = null;
@@ -472,7 +484,10 @@ public class VersionedIntervalTimeline<VersionType, ObjectType extends Overshado
         if (curr == null ||  //no further keys
             (prev != null && curr.getStartMillis() > prev.getEndMillis()) //a discontinuity
         ) {
+          CoverageTool.setisOvershadowed(8);
           return false;
+        } else {
+          CoverageTool.setisOvershadowed(9);
         }
 
         final TimelineEntry timelineEntry = completePartitionsTimeline.get(curr);
@@ -480,11 +495,17 @@ public class VersionedIntervalTimeline<VersionType, ObjectType extends Overshado
 
         //lower or same version
         if (versionCompare > 0) {
+          CoverageTool.setisOvershadowed(10);
           return false;
         } else if (versionCompare == 0) {
           if (timelineEntry.partitionHolder.stream().noneMatch(chunk -> chunk.getObject().overshadows(object))) {
+            CoverageTool.setisOvershadowed(11);
             return false;
+          } else {
+            CoverageTool.setisOvershadowed(12);
           }
+        } else {
+          CoverageTool.setisOvershadowed(13);
         }
 
         prev = curr;
@@ -550,7 +571,10 @@ public class VersionedIntervalTimeline<VersionType, ObjectType extends Overshado
     Interval entryInterval = entry.getTrueInterval();
 
     if (!currKey.overlaps(entryInterval)) {
+      CoverageTool.setBranchAddAtKey(0);
       return false;
+    } else {
+      CoverageTool.setBranchAddAtKey(1);
     }
 
     while (entryInterval != null && currKey != null && currKey.overlaps(entryInterval)) {
@@ -562,17 +586,21 @@ public class VersionedIntervalTimeline<VersionType, ObjectType extends Overshado
       );
 
       if (versionCompare < 0) {
+        CoverageTool.setBranchAddAtKey(2);
         // since the entry version is lower than the existing one, the existing one overwrites the given entry
         // if overlapped.
         if (currKey.contains(entryInterval)) {
+          CoverageTool.setBranchAddAtKey(5);
           // the version of the entry of currKey is larger than that of the given entry. Discard it
           return true;
         } else if (currKey.getStart().isBefore(entryInterval.getStart())) {
+          CoverageTool.setBranchAddAtKey(6);
           //       | entry |
           //     | cur |
           // =>        |new|
           entryInterval = new Interval(currKey.getEnd(), entryInterval.getEnd());
         } else {
+          CoverageTool.setBranchAddAtKey(7);
           //     | entry |
           //         | cur |
           // =>  |new|
@@ -582,19 +610,23 @@ public class VersionedIntervalTimeline<VersionType, ObjectType extends Overshado
           //       | cur |
           // =>          |new|
           if (entryInterval.getEnd().isAfter(currKey.getEnd())) {
+            CoverageTool.setBranchAddAtKey(8);
             entryInterval = new Interval(currKey.getEnd(), entryInterval.getEnd());
           } else {
+            CoverageTool.setBranchAddAtKey(9);
             // Discard this entry since there is no portion of the entry interval that goes past the end of the curr
             // key interval.
             entryInterval = null;
           }
         }
       } else if (versionCompare > 0) {
+        CoverageTool.setBranchAddAtKey(3);
         // since the entry version is greater than the existing one, the given entry overwrites the existing one
         // if overlapped.
         final TimelineEntry oldEntry = timeline.remove(currKey);
 
         if (currKey.contains(entryInterval)) {
+          CoverageTool.setBranchAddAtKey(10);
           //     |      cur      |
           //         | entry |
           // =>  |old|  new  |old|
@@ -604,21 +636,26 @@ public class VersionedIntervalTimeline<VersionType, ObjectType extends Overshado
 
           return true;
         } else if (currKey.getStart().isBefore(entryInterval.getStart())) {
+          CoverageTool.setBranchAddAtKey(11);
           //     |   cur  |
           //         |   entry   |
           // =>  |old|
           addIntervalToTimeline(new Interval(currKey.getStart(), entryInterval.getStart()), oldEntry, timeline);
         } else if (entryInterval.getEnd().isBefore(currKey.getEnd())) {
+          CoverageTool.setBranchAddAtKey(12);
           //            |   cur  |
           //     |   entry   |
           // =>              |old|
           addIntervalToTimeline(new Interval(entryInterval.getEnd(), currKey.getEnd()), oldEntry, timeline);
         }
       } else {
+        CoverageTool.setBranchAddAtKey(4);
         if (timeline.get(currKey).equals(entry)) {
+          CoverageTool.setBranchAddAtKey(13);
           // This occurs when restoring segments
           timeline.remove(currKey);
         } else {
+          CoverageTool.setBranchAddAtKey(14);
           throw new UOE(
               "Cannot add overlapping segments [%s and %s] with the same version [%s]",
               currKey,

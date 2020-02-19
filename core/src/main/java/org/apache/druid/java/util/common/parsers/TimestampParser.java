@@ -24,6 +24,7 @@ import com.google.common.base.Preconditions;
 import com.google.common.base.Strings;
 import org.apache.druid.java.util.common.DateTimes;
 import org.apache.druid.java.util.common.IAE;
+import org.apache.druid.java.util.common.granularity.CoverageTool;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 import org.joda.time.format.DateTimeFormat;
@@ -41,6 +42,7 @@ public class TimestampParser
   )
   {
     if ("auto".equalsIgnoreCase(format)) {
+      CoverageTool.setCreateTimestampParser(0);
       // Could be iso or millis
       final DateTimes.UtcFormatter parser = DateTimes.wrapFormatter(createAutoParser());
       return (String input) -> {
@@ -48,24 +50,34 @@ public class TimestampParser
 
         for (int i = 0; i < input.length(); i++) {
           if (input.charAt(i) < '0' || input.charAt(i) > '9') {
+            CoverageTool.setCreateTimestampParser(5);
             input = ParserUtils.stripQuotes(input);
             int lastIndex = input.lastIndexOf(' ');
             DateTimeZone timeZone = DateTimeZone.UTC;
             if (lastIndex > 0) {
+              CoverageTool.setCreateTimestampParser(7);
               DateTimeZone timeZoneFromString = ParserUtils.getDateTimeZone(input.substring(lastIndex + 1));
               if (timeZoneFromString != null) {
+                CoverageTool.setCreateTimestampParser(9);
                 timeZone = timeZoneFromString;
                 input = input.substring(0, lastIndex);
+              } else {
+                CoverageTool.setCreateTimestampParser(10);
               }
+            } else {
+              CoverageTool.setCreateTimestampParser(8);
             }
 
             return parser.parse(input).withZone(timeZone);
+          } else {
+            CoverageTool.setCreateTimestampParser(6);
           }
         }
 
         return DateTimes.utc(Long.parseLong(input));
       };
     } else if ("iso".equalsIgnoreCase(format)) {
+      CoverageTool.setCreateTimestampParser(1);
       return input -> {
         Preconditions.checkArgument(!Strings.isNullOrEmpty(input), "null timestamp");
         return DateTimes.of(ParserUtils.stripQuotes(input));
@@ -74,26 +86,31 @@ public class TimestampParser
                || "millis".equalsIgnoreCase(format)
                || "micro".equalsIgnoreCase(format)
                || "nano".equalsIgnoreCase(format)) {
+      CoverageTool.setCreateTimestampParser(2);
       final Function<Number, DateTime> numericFun = createNumericTimestampParser(format);
       return input -> {
         Preconditions.checkArgument(!Strings.isNullOrEmpty(input), "null timestamp");
         return numericFun.apply(Long.parseLong(ParserUtils.stripQuotes(input)));
       };
     } else if ("ruby".equalsIgnoreCase(format)) {
+      CoverageTool.setCreateTimestampParser(3);
       final Function<Number, DateTime> numericFun = createNumericTimestampParser(format);
       return input -> {
         Preconditions.checkArgument(!Strings.isNullOrEmpty(input), "null timestamp");
         return numericFun.apply(Double.parseDouble(ParserUtils.stripQuotes(input)));
       };
     } else {
+      CoverageTool.setCreateTimestampParser(4);
       try {
         final DateTimes.UtcFormatter formatter = DateTimes.wrapFormatter(DateTimeFormat.forPattern(format));
+        CoverageTool.setCreateTimestampParser(11);
         return input -> {
           Preconditions.checkArgument(!Strings.isNullOrEmpty(input), "null timestamp");
           return formatter.parse(ParserUtils.stripQuotes(input));
         };
       }
       catch (Exception e) {
+        CoverageTool.setCreateTimestampParser(12);
         throw new IAE(e, "Unable to parse timestamps with format [%s]", format);
       }
     }
