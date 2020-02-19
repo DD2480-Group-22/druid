@@ -49,7 +49,14 @@ public class MetadataStorageConnectorConfig
   @JsonProperty("dbcp")
   private Properties dbcpProperties;
 
-  public static boolean[] branch = new boolean[4];
+  public static boolean[] branch = {false, false, false, false};
+  
+  public static void printBranch() {
+    for(int i = 0; i < 4; ++i) {
+      System.out.print(i+":"+branch[i]+", ");
+    }
+    System.out.println();
+  }
   
   public boolean isCreateTables()
   {
