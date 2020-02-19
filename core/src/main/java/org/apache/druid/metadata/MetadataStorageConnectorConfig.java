@@ -49,6 +49,8 @@ public class MetadataStorageConnectorConfig
   @JsonProperty("dbcp")
   private Properties dbcpProperties;
 
+  public static boolean[] branch = new boolean[4];
+  
   public boolean isCreateTables()
   {
     return createTables;
@@ -146,10 +148,13 @@ public class MetadataStorageConnectorConfig
   @Override
   public boolean equals(Object o)
   {
+    branch[0] = True;
     if (this == o) {
+      branch[1] = True;
       return true;
     }
     if (!(o instanceof MetadataStorageConnectorConfig)) {
+      branch[2] = True;
       return false;
     }
 
@@ -162,6 +167,7 @@ public class MetadataStorageConnectorConfig
         checkGetUserNotEqual(that) &&
         checkGetDCBPropertiesNotEqual(that)
         ) {
+      branch[3] = True;
       return false;
     }
     return checkPasswordProviderEqual(that);
