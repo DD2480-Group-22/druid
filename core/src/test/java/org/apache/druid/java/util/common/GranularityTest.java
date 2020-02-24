@@ -20,6 +20,7 @@
 package org.apache.druid.java.util.common;
 
 import com.google.common.collect.ImmutableList;
+import org.apache.druid.java.util.common.granularity.CoverageTool;
 import org.apache.druid.java.util.common.granularity.Granularities;
 import org.apache.druid.java.util.common.granularity.Granularity;
 import org.apache.druid.java.util.common.granularity.GranularityType;
@@ -30,6 +31,7 @@ import org.joda.time.IllegalFieldValueException;
 import org.joda.time.Interval;
 import org.joda.time.Period;
 import org.joda.time.chrono.ISOChronology;
+import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -50,6 +52,12 @@ public class GranularityTest
   final Granularity WEEK = Granularities.WEEK;
   final Granularity MONTH = Granularities.MONTH;
   final Granularity YEAR = Granularities.YEAR;
+
+  @AfterClass
+  public static void result()
+  {
+    CoverageTool.getResultTruncate();
+  }
 
   @Test
   public void testHiveFormat()
