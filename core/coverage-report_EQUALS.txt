@@ -1,0 +1,1 @@
+[+] Total coverage for the method 'equals' is %75

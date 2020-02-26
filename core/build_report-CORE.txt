@@ -1,0 +1,502 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--------------------< [0;36morg.apache.druid:druid-core[0;1m >---------------------[m
+[[1;34mINFO[m] [1mBuilding druid-core 0.18.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mdruid-core[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/litneet64/jobs/KTH/DD2480/projects/assignment-3/druid/core/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-checkstyle-plugin:3.0.0:check[m [1m(validate)[m @ [36mdruid-core[0;1m ---[m
+[[1;34mINFO[m] Starting audit...
+Audit done.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m>>> [0;32mmaven-pmd-plugin:3.8:check[m [1m(validate)[0;1m > [0;1m:pmd[m @ [36mdruid-core[0;1m >>>[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-pmd-plugin:3.8:pmd[m [1m(pmd)[m @ [36mdruid-core[0;1m ---[m
+[[1;33mWARNING[m] Unable to locate Source XRef to link to - DISABLED
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m<<< [0;32mmaven-pmd-plugin:3.8:check[m [1m(validate)[0;1m < [0;1m:pmd[m @ [36mdruid-core[0;1m <<<[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-pmd-plugin:3.8:check[m [1m(validate)[m @ [36mdruid-core[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:1.4.1:enforce[m [1m(enforce-maven-version)[m @ [36mdruid-core[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:1.4.1:enforce[m [1m(default-cli)[m @ [36mdruid-core[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mgit-commit-id-plugin:2.2.5:revision[m [1m(default)[m @ [36mdruid-core[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.3:prepare-agent[m [1m(prepare-agent)[m @ [36mdruid-core[0;1m ---[m
+[[1;34mINFO[m] jacocoArgLine set to -javaagent:/home/litneet64/.m2/repository/org/jacoco/org.jacoco.agent/0.8.3/org.jacoco.agent-0.8.3-runtime.jar=destfile=/home/litneet64/jobs/KTH/DD2480/projects/assignment-3/druid/core/target/jacoco.exec,excludes=org/apache/druid/math/expr/antlr/Expr*:org/apache/druid/**/generated/*Benchmark*:org/apache/druid/data/input/influx/InfluxLineProtocol*:org/apache/druid/benchmark/**/*:org/apache/druid/**/*Benchmark*:org/testng/DruidTestRunnerFactory*:org/apache/druid/testing/**/*
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.3:prepare-agent[m [1m(coverage-initialize)[m @ [36mdruid-core[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/litneet64/.m2/repository/org/jacoco/org.jacoco.agent/0.8.3/org.jacoco.agent-0.8.3-runtime.jar=destfile=/home/litneet64/jobs/KTH/DD2480/projects/assignment-3/druid/core/target/jacoco.exec,excludes=org/apache/druid/math/expr/antlr/Expr*:org/apache/druid/**/generated/*Benchmark*:org/apache/druid/data/input/influx/InfluxLineProtocol*:org/apache/druid/benchmark/**/*:org/apache/druid/**/*Benchmark*:org/testng/DruidTestRunnerFactory*:org/apache/druid/testing/**/*
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mantlr4-maven-plugin:4.5.1:antlr4[m [1m(default)[m @ [36mdruid-core[0;1m ---[m
+[[1;34mINFO[m] ANTLR 4: Processing source directory /home/litneet64/jobs/KTH/DD2480/projects/assignment-3/druid/core/src/main/antlr4
+[[1;34mINFO[m] Processing grammar: org/apache/druid/math/expr/antlr/Expr.g4
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-remote-resources-plugin:1.5:process[m [1m(process-resource-bundles)[m @ [36mdruid-core[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-dependency-plugin:3.1.1:unpack-dependencies[m [1m(copy-sigar-lib-to-resources)[m @ [36mdruid-core[0;1m ---[m
+[[1;34mINFO[m] Unpacking /home/litneet64/.m2/repository/org/hyperic/sigar-dist/1.6.5.132/sigar-dist-1.6.5.132.zip to /home/litneet64/jobs/KTH/DD2480/projects/assignment-3/druid/core/target with includes "**/sigar-bin/lib/*" and excludes "**/sigar-bin/lib/*jar"
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:resources[m [1m(default-resources)[m @ [36mdruid-core[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 23 resources
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:compile[m [1m(default-compile)[m @ [36mdruid-core[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 478 source files to /home/litneet64/jobs/KTH/DD2480/projects/assignment-3/druid/core/target/classes
+[[1;34mINFO[m] /home/litneet64/jobs/KTH/DD2480/projects/assignment-3/druid/core/src/main/java/org/apache/druid/data/input/FiniteFirehoseFactory.java: Some input files use or override a deprecated API.
+[[1;34mINFO[m] /home/litneet64/jobs/KTH/DD2480/projects/assignment-3/druid/core/src/main/java/org/apache/druid/data/input/FiniteFirehoseFactory.java: Recompile with -Xlint:deprecation for details.
+[[1;34mINFO[m] /home/litneet64/jobs/KTH/DD2480/projects/assignment-3/druid/core/src/main/java/org/apache/druid/java/util/emitter/service/ServiceEmitter.java: Some input files use unchecked or unsafe operations.
+[[1;34mINFO[m] /home/litneet64/jobs/KTH/DD2480/projects/assignment-3/druid/core/src/main/java/org/apache/druid/java/util/emitter/service/ServiceEmitter.java: Recompile with -Xlint:unchecked for details.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mforbiddenapis:2.6:check[m [1m(compile)[m @ [36mdruid-core[0;1m ---[m
+[[1;34mINFO[m] Scanning for classes to check...
+[[1;34mINFO[m] Reading bundled API signatures: jdk-unsafe-1.8
+[[1;34mINFO[m] Reading bundled API signatures: jdk-system-out
+[[1;34mINFO[m] Reading API signatures: /home/litneet64/jobs/KTH/DD2480/projects/assignment-3/druid/codestyle/joda-time-forbidden-apis.txt
+[[1;34mINFO[m] Reading API signatures: /home/litneet64/jobs/KTH/DD2480/projects/assignment-3/druid/codestyle/druid-forbidden-apis.txt
+[[1;33mWARNING[m] Method not found while parsing signature: com.google.common.util.concurrent.MoreExecutors#newDirectExecutorService() [signature ignored]
+[[1;33mWARNING[m] Method not found while parsing signature: com.google.common.util.concurrent.MoreExecutors#directExecutor() [signature ignored]
+[[1;33mWARNING[m] Method not found while parsing signature: java.nio.file.Files#createTempDirectory(java.lang.String prefix,java.nio.file.FileAttribute...) [signature ignored]
+[[1;33mWARNING[m] Method not found while parsing signature: org.apache.commons.io.FileUtils#deleteDirectory() [signature ignored]
+[[1;33mWARNING[m] Some signatures were ignored because the following classes were not found on classpath:
+[[1;33mWARNING[m]   com.amazonaws.annotation.GuardedBy, com.google.common.io.BaseEncoding.base64,... (and 4 more).
+[[1;34mINFO[m] Loading classes to check...
+[[1;34mINFO[m] Scanning classes for violations...
+[[1;34mINFO[m] Scanned 890 class file(s) for forbidden API invocations (in 0.46s), 0 error(s).
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:testResources[m [1m(default-testResources)[m @ [36mdruid-core[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 9 resources
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:testCompile[m [1m(default-testCompile)[m @ [36mdruid-core[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 181 source files to /home/litneet64/jobs/KTH/DD2480/projects/assignment-3/druid/core/target/test-classes
+[[1;34mINFO[m] /home/litneet64/jobs/KTH/DD2480/projects/assignment-3/druid/core/src/test/java/org/apache/druid/java/util/common/parsers/RegexParserTest.java: Some input files use or override a deprecated API.
+[[1;34mINFO[m] /home/litneet64/jobs/KTH/DD2480/projects/assignment-3/druid/core/src/test/java/org/apache/druid/java/util/common/parsers/RegexParserTest.java: Recompile with -Xlint:deprecation for details.
+[[1;34mINFO[m] /home/litneet64/jobs/KTH/DD2480/projects/assignment-3/druid/core/src/test/java/org/apache/druid/collections/SerializablePairTest.java: Some input files use unchecked or unsafe operations.
+[[1;34mINFO[m] /home/litneet64/jobs/KTH/DD2480/projects/assignment-3/druid/core/src/test/java/org/apache/druid/collections/SerializablePairTest.java: Recompile with -Xlint:unchecked for details.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mforbiddenapis:2.6:testCheck[m [1m(testCompile)[m @ [36mdruid-core[0;1m ---[m
+[[1;34mINFO[m] Scanning for classes to check...
+[[1;34mINFO[m] Reading bundled API signatures: jdk-unsafe-1.8
+[[1;34mINFO[m] Reading API signatures: /home/litneet64/jobs/KTH/DD2480/projects/assignment-3/druid/codestyle/joda-time-forbidden-apis.txt
+[[1;34mINFO[m] Reading API signatures: /home/litneet64/jobs/KTH/DD2480/projects/assignment-3/druid/codestyle/druid-forbidden-apis.txt
+[[1;33mWARNING[m] Method not found while parsing signature: com.google.common.util.concurrent.MoreExecutors#newDirectExecutorService() [signature ignored]
+[[1;33mWARNING[m] Method not found while parsing signature: com.google.common.util.concurrent.MoreExecutors#directExecutor() [signature ignored]
+[[1;33mWARNING[m] Method not found while parsing signature: java.nio.file.Files#createTempDirectory(java.lang.String prefix,java.nio.file.FileAttribute...) [signature ignored]
+[[1;33mWARNING[m] Method not found while parsing signature: org.apache.commons.io.FileUtils#deleteDirectory() [signature ignored]
+[[1;33mWARNING[m] Some signatures were ignored because the following classes were not found on classpath:
+[[1;33mWARNING[m]   com.amazonaws.annotation.GuardedBy, com.google.common.io.BaseEncoding.base64,... (and 4 more).
+[[1;34mINFO[m] Loading classes to check...
+[[1;34mINFO[m] Scanning classes for violations...
+[[1;34mINFO[m] Scanned 377 class file(s) for forbidden API invocations (in 0.23s), 0 error(s).
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.22.2:test[m [1m(default-test)[m @ [36mdruid-core[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] Running org.apache.druid.indexer.[1mTaskStatusPlusTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.471 s - in org.apache.druid.indexer.[1mTaskStatusPlusTest[m
+[[1;34mINFO[m] Running org.apache.druid.indexer.partitions.[1mSingleDimensionPartitionsSpecTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m20[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.031 s - in org.apache.druid.indexer.partitions.[1mSingleDimensionPartitionsSpecTest[m
+[[1;34mINFO[m] Running org.apache.druid.indexer.[1mChecksTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m8[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 s - in org.apache.druid.indexer.[1mChecksTest[m
+[[1;34mINFO[m] Running org.apache.druid.indexer.[1mTaskStatusTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in org.apache.druid.indexer.[1mTaskStatusTest[m
+[[1;34mINFO[m] Running org.apache.druid.concurrent.[1mConcurrentAwaitableCounterTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.022 s - in org.apache.druid.concurrent.[1mConcurrentAwaitableCounterTest[m
+[[1;34mINFO[m] Running org.apache.druid.concurrent.[1mLifecycleLockTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m8[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.441 s - in org.apache.druid.concurrent.[1mLifecycleLockTest[m
+[[1;34mINFO[m] Running org.apache.druid.concurrent.[1mExecsTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m4[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.018 s - in org.apache.druid.concurrent.[1mExecsTest[m
+[[1;34mINFO[m] Running org.apache.druid.math.expr.[1mFunctionTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m28[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.217 s - in org.apache.druid.math.expr.[1mFunctionTest[m
+[[1;34mINFO[m] Running org.apache.druid.math.expr.[1mExprsTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m4[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.druid.math.expr.[1mExprsTest[m
+[[1;34mINFO[m] Running org.apache.druid.math.expr.[1mParserTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m18[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.106 s - in org.apache.druid.math.expr.[1mParserTest[m
+[[1;34mINFO[m] Running org.apache.druid.math.expr.[1mEvalTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m3[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in org.apache.druid.math.expr.[1mEvalTest[m
+[[1;34mINFO[m] Running org.apache.druid.math.expr.[1mApplyFunctionTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m9[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.036 s - in org.apache.druid.math.expr.[1mApplyFunctionTest[m
+[[1;34mINFO[m] Running org.apache.druid.guice.[1mLifecycleScopeTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m3[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.297 s - in org.apache.druid.guice.[1mLifecycleScopeTest[m
+[[1;34mINFO[m] Running org.apache.druid.guice.[1mJsonConfiguratorTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m6[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.04 s - in org.apache.druid.guice.[1mJsonConfiguratorTest[m
+[[1;34mINFO[m] Running org.apache.druid.guice.[1mPolyBindTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.044 s - in org.apache.druid.guice.[1mPolyBindTest[m
+[[1;34mINFO[m] Running org.apache.druid.guice.[1mConditionalMultibindTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m7[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.058 s - in org.apache.druid.guice.[1mConditionalMultibindTest[m
+[[1;34mINFO[m] Running org.apache.druid.metadata.[1mMetadataStorageConnectorConfigTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m4[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s - in org.apache.druid.metadata.[1mMetadataStorageConnectorConfigTest[m
+[[1;34mINFO[m] Running org.apache.druid.metadata.[1mEnvironmentVariablePasswordProviderTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.druid.metadata.[1mEnvironmentVariablePasswordProviderTest[m
+[[1;34mINFO[m] Running org.apache.druid.metadata.[1mDefaultPasswordProviderTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m5[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.druid.metadata.[1mDefaultPasswordProviderTest[m
+[[1;34mINFO[m] Running org.apache.druid.common.utils.[1mServletResourceUtilsTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.druid.common.utils.[1mServletResourceUtilsTest[m
+[[1;34mINFO[m] Running org.apache.druid.common.utils.[1mSerializerUtilsTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m11[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 s - in org.apache.druid.common.utils.[1mSerializerUtilsTest[m
+[[1;34mINFO[m] Running org.apache.druid.common.utils.[1mUUIDUtilsTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m72[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.032 s - in org.apache.druid.common.utils.[1mUUIDUtilsTest[m
+[[1;34mINFO[m] Running org.apache.druid.common.utils.[1mStringUtilsTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.apache.druid.common.utils.[1mStringUtilsTest[m
+[[1;34mINFO[m] Running org.apache.druid.common.utils.[1mLogTest[m
+[[1;33mWARNING[m] [1;33mTests [0;1mrun: [0;1m2[m, Failures: 0, Errors: 0, [1;33mSkipped: [0;1;33m1[m, Time elapsed: 0 s - in org.apache.druid.common.utils.[1mLogTest[m
+[[1;34mINFO[m] Running org.apache.druid.common.utils.[1mPropUtilsTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m6[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.druid.common.utils.[1mPropUtilsTest[m
+[[1;34mINFO[m] Running org.apache.druid.common.utils.[1mIntArrayUtilsTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in org.apache.druid.common.utils.[1mIntArrayUtilsTest[m
+[[1;34mINFO[m] Running org.apache.druid.common.utils.[1mSocketUtilTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m3[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in org.apache.druid.common.utils.[1mSocketUtilTest[m
+[[1;34mINFO[m] Running org.apache.druid.common.utils.[1mJodaUtilsTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m7[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.049 s - in org.apache.druid.common.utils.[1mJodaUtilsTest[m
+[[1;34mINFO[m] Running org.apache.druid.common.guava.[1mCombiningSequenceTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m42[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.047 s - in org.apache.druid.common.guava.[1mCombiningSequenceTest[m
+[[1;34mINFO[m] Running org.apache.druid.common.guava.[1mGuavaUtilsTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.apache.druid.common.guava.[1mGuavaUtilsTest[m
+[[1;34mINFO[m] Running org.apache.druid.common.guava.[1mComplexSequenceTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.druid.common.guava.[1mComplexSequenceTest[m
+[[1;34mINFO[m] Running org.apache.druid.common.config.[1mNullHandlingTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m7[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.druid.common.config.[1mNullHandlingTest[m
+[[1;34mINFO[m] Running org.apache.druid.utils.[1mCircularBufferTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.apache.druid.utils.[1mCircularBufferTest[m
+[[1;34mINFO[m] Running org.apache.druid.utils.[1mJvmUtilsTest[m
+[[1;33mWARNING[m] [1;33mTests [0;1mrun: [0;1m2[m, Failures: 0, Errors: 0, [1;33mSkipped: [0;1;33m1[m, Time elapsed: 0.006 s - in org.apache.druid.utils.[1mJvmUtilsTest[m
+[[1;34mINFO[m] Running org.apache.druid.timeline.[1mVersionedIntervalTimelineTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m66[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.153 s - in org.apache.druid.timeline.[1mVersionedIntervalTimelineTest[m
+[[1;34mINFO[m] Running org.apache.druid.timeline.[1mVersionedIntervalTimelineSpecificDataTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m16[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.049 s - in org.apache.druid.timeline.[1mVersionedIntervalTimelineSpecificDataTest[m
+[[1;34mINFO[m] Running org.apache.druid.timeline.[1mDataSegmentTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m5[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.08 s - in org.apache.druid.timeline.[1mDataSegmentTest[m
+[[1;34mINFO[m] Running org.apache.druid.timeline.[1mSegmentWithOvershadowedStatusTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s - in org.apache.druid.timeline.[1mSegmentWithOvershadowedStatusTest[m
+[[1;34mINFO[m] Running org.apache.druid.timeline.[1mSegmentIdTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m11[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in org.apache.druid.timeline.[1mSegmentIdTest[m
+[[1;34mINFO[m] Running org.apache.druid.timeline.partition.[1mHashBasedNumberedPartialShardSpecTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m3[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.496 s - in org.apache.druid.timeline.partition.[1mHashBasedNumberedPartialShardSpecTest[m
+[[1;34mINFO[m] Running org.apache.druid.timeline.partition.[1mStringPartitionChunkTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m5[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.apache.druid.timeline.partition.[1mStringPartitionChunkTest[m
+[[1;34mINFO[m] Running org.apache.druid.timeline.partition.[1mPartitionBoundariesTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m8[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.079 s - in org.apache.druid.timeline.partition.[1mPartitionBoundariesTest[m
+[[1;34mINFO[m] Running org.apache.druid.timeline.partition.[1mNoneShardSpecTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m3[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in org.apache.druid.timeline.partition.[1mNoneShardSpecTest[m
+[[1;34mINFO[m] Running org.apache.druid.timeline.partition.[1mIntegerPartitionChunkTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m5[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.apache.druid.timeline.partition.[1mIntegerPartitionChunkTest[m
+[[1;34mINFO[m] Running org.apache.druid.timeline.partition.[1mSingleDimensionPartialShardSpecTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.049 s - in org.apache.druid.timeline.partition.[1mSingleDimensionPartialShardSpecTest[m
+[[1;34mINFO[m] Running org.apache.druid.timeline.partition.[1mOvershadowableManagerTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m28[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.025 s - in org.apache.druid.timeline.partition.[1mOvershadowableManagerTest[m
+[[1;34mINFO[m] Running org.apache.druid.js.[1mJavaScriptConfigTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.druid.js.[1mJavaScriptConfigTest[m
+[[1;34mINFO[m] Running org.apache.druid.jackson.[1mJacksonExtremeDoubleValuesSerdeTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.druid.jackson.[1mJacksonExtremeDoubleValuesSerdeTest[m
+[[1;34mINFO[m] Running org.apache.druid.collections.[1mSerializablePairTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.druid.collections.[1mSerializablePairTest[m
+[[1;34mINFO[m] Running org.apache.druid.collections.[1mStupidResourceHolderTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.druid.collections.[1mStupidResourceHolderTest[m
+[[1;34mINFO[m] Running org.apache.druid.collections.[1mBlockingPoolTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m11[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.327 s - in org.apache.druid.collections.[1mBlockingPoolTest[m
+[[1;34mINFO[m] Running org.apache.druid.collections.[1mCombiningIteratorTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m5[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.027 s - in org.apache.druid.collections.[1mCombiningIteratorTest[m
+[[1;34mINFO[m] Running org.apache.druid.collections.[1mReferenceCountingResourceHolderTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m3[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.056 s - in org.apache.druid.collections.[1mReferenceCountingResourceHolderTest[m
+[[1;34mINFO[m] Running org.apache.druid.collections.[1mCombiningIterableTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in org.apache.druid.collections.[1mCombiningIterableTest[m
+[[1;34mINFO[m] Running org.apache.druid.collections.[1mStupidPoolTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m3[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.05 s - in org.apache.druid.collections.[1mStupidPoolTest[m
+[[1;34mINFO[m] Running org.apache.druid.data.input.impl.[1mInputEntityIteratingReaderTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.193 s - in org.apache.druid.data.input.impl.[1mInputEntityIteratingReaderTest[m
+[[1;34mINFO[m] Running org.apache.druid.data.input.impl.[1mJavaScriptParseSpecTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m3[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.228 s - in org.apache.druid.data.input.impl.[1mJavaScriptParseSpecTest[m
+[[1;34mINFO[m] Running org.apache.druid.data.input.impl.[1mFileIteratingFirehoseTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m48[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.029 s - in org.apache.druid.data.input.impl.[1mFileIteratingFirehoseTest[m
+[[1;34mINFO[m] Running org.apache.druid.data.input.impl.[1mJSONPathSpecTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in org.apache.druid.data.input.impl.[1mJSONPathSpecTest[m
+[[1;34mINFO[m] Running org.apache.druid.data.input.impl.[1mLocalInputSourceTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in org.apache.druid.data.input.impl.[1mLocalInputSourceTest[m
+[[1;34mINFO[m] Running org.apache.druid.data.input.impl.[1mCSVParseSpecTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.druid.data.input.impl.[1mCSVParseSpecTest[m
+[[1;34mINFO[m] Running org.apache.druid.data.input.impl.[1mJSONParseSpecTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m3[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.187 s - in org.apache.druid.data.input.impl.[1mJSONParseSpecTest[m
+[[1;34mINFO[m] Running org.apache.druid.data.input.impl.[1mJsonInputFormatTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in org.apache.druid.data.input.impl.[1mJsonInputFormatTest[m
+[[1;34mINFO[m] Running org.apache.druid.data.input.impl.[1mTimedShutoffInputSourceTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.005 s - in org.apache.druid.data.input.impl.[1mTimedShutoffInputSourceTest[m
+[[1;34mINFO[m] Running org.apache.druid.data.input.impl.[1mNoopInputRowParserTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 s - in org.apache.druid.data.input.impl.[1mNoopInputRowParserTest[m
+[[1;34mINFO[m] Running org.apache.druid.data.input.impl.[1mCloudObjectLocationTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m4[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in org.apache.druid.data.input.impl.[1mCloudObjectLocationTest[m
+[[1;34mINFO[m] Running org.apache.druid.data.input.impl.[1mTimestampSpecTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m3[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.apache.druid.data.input.impl.[1mTimestampSpecTest[m
+[[1;34mINFO[m] Running org.apache.druid.data.input.impl.[1mJSONLowercaseParseSpecTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.apache.druid.data.input.impl.[1mJSONLowercaseParseSpecTest[m
+[[1;34mINFO[m] Running org.apache.druid.data.input.impl.[1mDelimitedInputFormatTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m10[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in org.apache.druid.data.input.impl.[1mDelimitedInputFormatTest[m
+[[1;34mINFO[m] Running org.apache.druid.data.input.impl.[1mRegexParseSpecTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 s - in org.apache.druid.data.input.impl.[1mRegexParseSpecTest[m
+[[1;34mINFO[m] Running org.apache.druid.data.input.impl.[1mDelimitedParseSpecTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m3[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 s - in org.apache.druid.data.input.impl.[1mDelimitedParseSpecTest[m
+[[1;34mINFO[m] Running org.apache.druid.data.input.impl.[1mStringInputRowParserTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.druid.data.input.impl.[1mStringInputRowParserTest[m
+[[1;34mINFO[m] Running org.apache.druid.data.input.impl.[1mHttpInputSourceTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in org.apache.druid.data.input.impl.[1mHttpInputSourceTest[m
+[[1;34mINFO[m] Running org.apache.druid.data.input.impl.[1mDelimitedReaderTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m7[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in org.apache.druid.data.input.impl.[1mDelimitedReaderTest[m
+[[1;34mINFO[m] Running org.apache.druid.data.input.impl.[1mDimensionsSpecSerdeTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s - in org.apache.druid.data.input.impl.[1mDimensionsSpecSerdeTest[m
+[[1;34mINFO[m] Running org.apache.druid.data.input.impl.prefetch.[1mRetryingInputStreamTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.069 s - in org.apache.druid.data.input.impl.prefetch.[1mRetryingInputStreamTest[m
+[[1;34mINFO[m] Running org.apache.druid.data.input.impl.prefetch.[1mPrefetchableTextFilesFirehoseFactoryTest[m
+[[1;31mERROR[m] [1;31mTests [0;1mrun: [0;1m13[m, Failures: 0, [1;31mErrors: [0;1;31m1[m, Skipped: 0, Time elapsed: 71.983 s[1;31m <<< FAILURE![m - in org.apache.druid.data.input.impl.prefetch.[1mPrefetchableTextFilesFirehoseFactoryTest[m
+[[1;31mERROR[m] testWithoutCache(org.apache.druid.data.input.impl.prefetch.PrefetchableTextFilesFirehoseFactoryTest)  Time elapsed: 60.042 s  <<< ERROR!
+java.lang.RuntimeException: java.util.concurrent.TimeoutException
+	at org.apache.druid.data.input.impl.prefetch.Fetcher.openObjectFromLocal(Fetcher.java:226)
+	at org.apache.druid.data.input.impl.prefetch.Fetcher.next(Fetcher.java:177)
+	at org.apache.druid.data.input.impl.prefetch.PrefetchableTextFilesFirehoseFactory$2.next(PrefetchableTextFilesFirehoseFactory.java:239)
+	at org.apache.druid.data.input.impl.prefetch.PrefetchableTextFilesFirehoseFactory$2.next(PrefetchableTextFilesFirehoseFactory.java:225)
+	at org.apache.druid.data.input.impl.FileIteratingFirehose.getNextLineIterator(FileIteratingFirehose.java:105)
+	at org.apache.druid.data.input.impl.FileIteratingFirehose.hasMore(FileIteratingFirehose.java:66)
+	at org.apache.druid.data.input.impl.prefetch.PrefetchableTextFilesFirehoseFactoryTest.testWithoutCache(PrefetchableTextFilesFirehoseFactoryTest.java:207)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.rules.ExpectedException$ExpectedExceptionStatement.evaluate(ExpectedException.java:239)
+	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.rules.ExternalResource$1.evaluate(ExternalResource.java:48)
+	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+Caused by: java.util.concurrent.TimeoutException
+	... 37 more
+
+[[1;34mINFO[m] Running org.apache.druid.data.input.impl.prefetch.[1mJsonIteratorTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in org.apache.druid.data.input.impl.prefetch.[1mJsonIteratorTest[m
+[[1;34mINFO[m] Running org.apache.druid.data.input.impl.[1mDimensionSchemaTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.druid.data.input.impl.[1mDimensionSchemaTest[m
+[[1;34mINFO[m] Running org.apache.druid.data.input.impl.[1mCsvReaderTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m7[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.apache.druid.data.input.impl.[1mCsvReaderTest[m
+[[1;34mINFO[m] Running org.apache.druid.data.input.impl.[1mParseSpecTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m7[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.apache.druid.data.input.impl.[1mParseSpecTest[m
+[[1;34mINFO[m] Running org.apache.druid.data.input.impl.[1mJsonReaderTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.apache.druid.data.input.impl.[1mJsonReaderTest[m
+[[1;34mINFO[m] Running org.apache.druid.data.input.impl.[1mTimeAndDimsParseSpecTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in org.apache.druid.data.input.impl.[1mTimeAndDimsParseSpecTest[m
+[[1;34mINFO[m] Running org.apache.druid.data.input.impl.[1mCsvInputFormatTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m9[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in org.apache.druid.data.input.impl.[1mCsvInputFormatTest[m
+[[1;34mINFO[m] Running org.apache.druid.data.input.impl.[1mInputRowParserSerdeTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m5[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.077 s - in org.apache.druid.data.input.impl.[1mInputRowParserSerdeTest[m
+[[1;34mINFO[m] Running org.apache.druid.data.input.[1mHandlingInputRowIteratorTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m6[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in org.apache.druid.data.input.[1mHandlingInputRowIteratorTest[m
+[[1;34mINFO[m] Running org.apache.druid.data.input.[1mFirehoseFactoryToInputSourceAdaptorTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.apache.druid.data.input.[1mFirehoseFactoryToInputSourceAdaptorTest[m
+[[1;34mINFO[m] Running org.apache.druid.data.input.[1mMapBasedRowTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.apache.druid.data.input.[1mMapBasedRowTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.metrics.[1mJvmPidDiscovererTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in org.apache.druid.java.util.metrics.[1mJvmPidDiscovererTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.metrics.[1mCpuAcctDeltaMonitorTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.02 s - in org.apache.druid.java.util.metrics.[1mCpuAcctDeltaMonitorTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.metrics.[1mJvmMonitorTest[m
+[[1;33mWARNING[m] [1;33mTests [0;1mrun: [0;1m1[m, Failures: 0, Errors: 0, [1;33mSkipped: [0;1;33m1[m, Time elapsed: 0.01 s - in org.apache.druid.java.util.metrics.[1mJvmMonitorTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.metrics.[1mMonitorsTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s - in org.apache.druid.java.util.metrics.[1mMonitorsTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.metrics.[1mSigarPidDiscovererTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.druid.java.util.metrics.[1mSigarPidDiscovererTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.metrics.[1mAllocationMetricCollectorTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.druid.java.util.metrics.[1mAllocationMetricCollectorTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.metrics.[1mSigarLoadTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.druid.java.util.metrics.[1mSigarLoadTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.metrics.[1mMonitorUtilsTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.druid.java.util.metrics.[1mMonitorUtilsTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.metrics.[1mCgroupMemoryMonitorTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 s - in org.apache.druid.java.util.metrics.[1mCgroupMemoryMonitorTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.metrics.cgroups.[1mCpuAcctTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m4[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s - in org.apache.druid.java.util.metrics.cgroups.[1mCpuAcctTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.metrics.cgroups.[1mMemoryTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in org.apache.druid.java.util.metrics.cgroups.[1mMemoryTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.metrics.cgroups.[1mProcCgroupDiscovererTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m3[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in org.apache.druid.java.util.metrics.cgroups.[1mProcCgroupDiscovererTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.emitter.core.[1mCustomEmitterFactoryTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in org.apache.druid.java.util.emitter.core.[1mCustomEmitterFactoryTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.emitter.core.[1mHttpEmitterConfigTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m5[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s - in org.apache.druid.java.util.emitter.core.[1mHttpEmitterConfigTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.emitter.core.[1mHttpPostEmitterStressTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m3[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 19.758 s - in org.apache.druid.java.util.emitter.core.[1mHttpPostEmitterStressTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.emitter.core.[1mParametrizedUriEmitterTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m5[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.115 s - in org.apache.druid.java.util.emitter.core.[1mParametrizedUriEmitterTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.emitter.core.[1mParametrizedUriEmitterConfigTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in org.apache.druid.java.util.emitter.core.[1mParametrizedUriEmitterConfigTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.emitter.core.[1mEmitterTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m8[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.378 s - in org.apache.druid.java.util.emitter.core.[1mEmitterTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.emitter.core.[1mLoggingEmitterConfigTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m4[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.druid.java.util.emitter.core.[1mLoggingEmitterConfigTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.emitter.core.[1mComposingEmitterTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m4[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in org.apache.druid.java.util.emitter.core.[1mComposingEmitterTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.emitter.core.[1mHttpPostEmitterTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.045 s - in org.apache.druid.java.util.emitter.core.[1mHttpPostEmitterTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.emitter.core.[1mHttpEmitterTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.011 s - in org.apache.druid.java.util.emitter.core.[1mHttpEmitterTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.emitter.service.[1mServiceMetricEventTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m5[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.druid.java.util.emitter.service.[1mServiceMetricEventTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.emitter.service.[1mAlertEventTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m5[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.druid.java.util.emitter.service.[1mAlertEventTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.common.[1mNumbersTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m11[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.apache.druid.java.util.common.[1mNumbersTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.common.io.smoosh.[1mSmooshedFileMapperTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m7[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.04 s - in org.apache.druid.java.util.common.io.smoosh.[1mSmooshedFileMapperTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.common.io.[1mNativeIOTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m4[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.059 s - in org.apache.druid.java.util.common.io.[1mNativeIOTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.common.[1mURIsTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m3[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.druid.java.util.common.[1mURIsTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.common.[1mCompressionUtilsTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m30[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.424 s - in org.apache.druid.java.util.common.[1mCompressionUtilsTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.common.parsers.[1mJSONPathParserTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m8[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in org.apache.druid.java.util.common.parsers.[1mJSONPathParserTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.common.parsers.[1mParserUtilsTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.druid.java.util.common.parsers.[1mParserUtilsTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.common.parsers.[1mCloseableIteratorTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in org.apache.druid.java.util.common.parsers.[1mCloseableIteratorTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.common.parsers.[1mFlatTextFormatParserTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m20[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in org.apache.druid.java.util.common.parsers.[1mFlatTextFormatParserTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.common.parsers.[1mTimestampParserTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m12[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in org.apache.druid.java.util.common.parsers.[1mTimestampParserTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.common.parsers.[1mJavaScriptParserTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m3[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s - in org.apache.druid.java.util.common.parsers.[1mJavaScriptParserTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.common.parsers.[1mRegexParserTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m5[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in org.apache.druid.java.util.common.parsers.[1mRegexParserTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.common.lifecycle.[1mLifecycleTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m5[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.084 s - in org.apache.druid.java.util.common.lifecycle.[1mLifecycleTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.common.[1mDateTimesTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m3[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.apache.druid.java.util.common.[1mDateTimesTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.common.[1mStreamUtilsTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.346 s - in org.apache.druid.java.util.common.[1mStreamUtilsTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.common.[1mStringUtilsTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m20[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.apache.druid.java.util.common.[1mStringUtilsTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.common.guava.[1mLimitedSequenceTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m5[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in org.apache.druid.java.util.common.guava.[1mLimitedSequenceTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.common.guava.[1mWrappingSequenceTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.druid.java.util.common.guava.[1mWrappingSequenceTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.common.guava.[1mConcatSequenceTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m8[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in org.apache.druid.java.util.common.guava.[1mConcatSequenceTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.common.guava.[1mMappedSequenceTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.druid.java.util.common.guava.[1mMappedSequenceTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.common.guava.[1mParallelMergeCombiningSequenceTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m16[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.653 s - in org.apache.druid.java.util.common.guava.[1mParallelMergeCombiningSequenceTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.common.guava.[1mComparatorsTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.apache.druid.java.util.common.guava.[1mComparatorsTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.common.guava.[1mFunctionalIteratorTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m5[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.apache.druid.java.util.common.guava.[1mFunctionalIteratorTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.common.guava.[1mBaseSequenceTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m3[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.apache.druid.java.util.common.guava.[1mBaseSequenceTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.common.guava.[1mMergeIteratorTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.druid.java.util.common.guava.[1mMergeIteratorTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.common.guava.[1mFunctionalIterableTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m5[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.apache.druid.java.util.common.guava.[1mFunctionalIterableTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.common.guava.[1mMergeSequenceTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m8[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.druid.java.util.common.guava.[1mMergeSequenceTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.common.guava.[1mFilteredSequenceTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.apache.druid.java.util.common.guava.[1mFilteredSequenceTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.common.guava.[1mWithEffectSequenceTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.apache.druid.java.util.common.guava.[1mWithEffectSequenceTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.common.[1mRetryUtilsTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m4[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.244 s - in org.apache.druid.java.util.common.[1mRetryUtilsTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.common.[1mGranularityTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m15[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.028 s - in org.apache.druid.java.util.common.[1mGranularityTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.common.[1mFileUtilsTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m5[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.02 s - in org.apache.druid.java.util.common.[1mFileUtilsTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.common.logger.[1mLoggerTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m7[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.554 s - in org.apache.druid.java.util.common.logger.[1mLoggerTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.common.[1mByteBufferUtilsTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in org.apache.druid.java.util.common.[1mByteBufferUtilsTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.http.client.pool.[1mResourcePoolTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m6[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.139 s - in org.apache.druid.java.util.http.client.pool.[1mResourcePoolTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.http.client.io.[1mAppendableByteArrayInputStreamTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m8[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.027 s - in org.apache.druid.java.util.http.client.io.[1mAppendableByteArrayInputStreamTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.http.client.[1mJankyServersTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m7[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.165 s - in org.apache.druid.java.util.http.client.[1mJankyServersTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.http.client.[1mFriendlyServersTest[m
+[[1;33mWARNING[m] [1;33mTests [0;1mrun: [0;1m4[m, Failures: 0, Errors: 0, [1;33mSkipped: [0;1;33m1[m, Time elapsed: 0.676 s - in org.apache.druid.java.util.http.client.[1mFriendlyServersTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.http.client.response.[1mSequenceInputStreamResponseHandlerTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m5[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in org.apache.druid.java.util.http.client.response.[1mSequenceInputStreamResponseHandlerTest[m
+[[1;34mINFO[m] Running org.apache.druid.java.util.http.client.[1mAsyncHttpClientTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.302 s - in org.apache.druid.java.util.http.client.[1mAsyncHttpClientTest[m
+[[1;34mINFO[m] Running org.apache.druid.segment.[1mSegmentUtilsTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m3[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in org.apache.druid.segment.[1mSegmentUtilsTest[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;33mWARNING[m] [1;33mFlakes: [m
+[[1;33mWARNING[m] [1;33morg.apache.druid.data.input.impl.prefetch.PrefetchableTextFilesFirehoseFactoryTest.testWithoutCache(org.apache.druid.data.input.impl.prefetch.PrefetchableTextFilesFirehoseFactoryTest)[m
+[[1;31mERROR[m] [1;31m  Run 1: PrefetchableTextFilesFirehoseFactoryTest.testWithoutCache:207 » Runtime java.u...[m
+[[1;34mINFO[m] [1;32m  Run 2: PASS[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] 
+[[1;33mWARNING[m] [1;33mTests run: 956, Failures: 0, Errors: 0, Skipped: 4, Flakes: 1[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32manimal-sniffer-maven-plugin:1.17:check[m [1m(check-java-api)[m @ [36mdruid-core[0;1m ---[m
+[[1;34mINFO[m] Checking unresolved references to org.codehaus.mojo.signature:java18:1.0
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-jar-plugin:3.1.0:jar[m [1m(default-jar)[m @ [36mdruid-core[0;1m ---[m
+[[1;34mINFO[m] Building jar: /home/litneet64/jobs/KTH/DD2480/projects/assignment-3/druid/core/target/druid-core-0.18.0-SNAPSHOT.jar
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-jar-plugin:3.1.0:test-jar[m [1m(default)[m @ [36mdruid-core[0;1m ---[m
+[[1;34mINFO[m] Building jar: /home/litneet64/jobs/KTH/DD2480/projects/assignment-3/druid/core/target/druid-core-0.18.0-SNAPSHOT-tests.jar
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-site-plugin:3.1:attach-descriptor[m [1m(attach-descriptor)[m @ [36mdruid-core[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-install-plugin:2.3.1:install[m [1m(default)[m @ [36mdruid-core[0;1m ---[m
+[[1;34mINFO[m] Installing /home/litneet64/jobs/KTH/DD2480/projects/assignment-3/druid/core/target/druid-core-0.18.0-SNAPSHOT.jar to /home/litneet64/.m2/repository/org/apache/druid/druid-core/0.18.0-SNAPSHOT/druid-core-0.18.0-SNAPSHOT.jar
+[[1;34mINFO[m] Installing /home/litneet64/jobs/KTH/DD2480/projects/assignment-3/druid/core/pom.xml to /home/litneet64/.m2/repository/org/apache/druid/druid-core/0.18.0-SNAPSHOT/druid-core-0.18.0-SNAPSHOT.pom
+[[1;34mINFO[m] Installing /home/litneet64/jobs/KTH/DD2480/projects/assignment-3/druid/core/target/druid-core-0.18.0-SNAPSHOT-tests.jar to /home/litneet64/.m2/repository/org/apache/druid/druid-core/0.18.0-SNAPSHOT/druid-core-0.18.0-SNAPSHOT-tests.jar
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.3:report[m [1m(coverage-report)[m @ [36mdruid-core[0;1m ---[m
+[[1;34mINFO[m] Loading execution data file /home/litneet64/jobs/KTH/DD2480/projects/assignment-3/druid/core/target/jacoco.exec
+[[1;34mINFO[m] Analyzed bundle 'druid-core' with 739 classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.3:check[m [1m(coverage-check)[m @ [36mdruid-core[0;1m ---[m
+[[1;34mINFO[m] Loading execution data file /home/litneet64/jobs/KTH/DD2480/projects/assignment-3/druid/core/target/jacoco.exec
+[[1;34mINFO[m] Analyzed bundle 'druid-core' with 739 classes
+[[1;34mINFO[m] All coverage checks have been met.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-install-plugin:2.3.1:install[m [1m(default-install)[m @ [36mdruid-core[0;1m ---[m
+[[1;34mINFO[m] Installing /home/litneet64/jobs/KTH/DD2480/projects/assignment-3/druid/core/target/druid-core-0.18.0-SNAPSHOT.jar to /home/litneet64/.m2/repository/org/apache/druid/druid-core/0.18.0-SNAPSHOT/druid-core-0.18.0-SNAPSHOT.jar
+[[1;34mINFO[m] Installing /home/litneet64/jobs/KTH/DD2480/projects/assignment-3/druid/core/pom.xml to /home/litneet64/.m2/repository/org/apache/druid/druid-core/0.18.0-SNAPSHOT/druid-core-0.18.0-SNAPSHOT.pom
+[[1;34mINFO[m] Installing /home/litneet64/jobs/KTH/DD2480/projects/assignment-3/druid/core/target/druid-core-0.18.0-SNAPSHOT-tests.jar to /home/litneet64/.m2/repository/org/apache/druid/druid-core/0.18.0-SNAPSHOT/druid-core-0.18.0-SNAPSHOT-tests.jar
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  02:33 min
+[[1;34mINFO[m] Finished at: 2020-02-26T02:48:12+01:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m

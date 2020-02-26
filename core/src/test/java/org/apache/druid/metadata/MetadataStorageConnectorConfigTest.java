@@ -23,7 +23,11 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
+import java.nio.charset.StandardCharsets;
 import java.util.Properties;
 
 public class MetadataStorageConnectorConfigTest
@@ -55,6 +59,7 @@ public class MetadataStorageConnectorConfigTest
         MetadataStorageConnectorConfig.class
     );
   }
+
 
   @Test
   public void testEquals() throws IOException
@@ -121,6 +126,22 @@ public class MetadataStorageConnectorConfigTest
     Assert.assertFalse(metadataStorageConnectorConfig.equals(msccCrafted3));
     Assert.assertFalse(metadataStorageConnectorConfig.equals(msccCrafted4));
     Assert.assertFalse(metadataStorageConnectorConfig.equals(msccCrafted5));
+
+    // branch coverage tool check for DD2480
+    int total = 4;
+    int curr_branches = 0;
+
+    for (int i = 0; i < total; i++) {
+      if (msccCrafted1.branch[i]) {
+        curr_branches++;
+      }
+    }
+
+    int cov = curr_branches * 100 / total;
+
+    Writer outwriter = new OutputStreamWriter(new FileOutputStream("coverage-report_EQUALS.txt"), StandardCharsets.UTF_8);
+    outwriter.write("[+] Total coverage for the method 'equals' is %" + cov);
+    outwriter.close();
   }
 
   private static final ObjectMapper JSON_MAPPER = new ObjectMapper();
