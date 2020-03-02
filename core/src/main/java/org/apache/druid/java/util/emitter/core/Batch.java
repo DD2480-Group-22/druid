@@ -66,6 +66,8 @@ class Batch extends AbstractQueuedLongSynchronizer
     return state < 0;
   }
 
+  public static boolean[] branch = {false, false, false, false, false};
+
   private static boolean isEmittingAllowed(long state)
   {
     return isSealed(state) && parties(state) == 0;
@@ -328,13 +330,18 @@ class Batch extends AbstractQueuedLongSynchronizer
   @Override
   protected boolean tryReleaseShared(long tag)
   {
+    branch[0] = true;
     if (tag == UNLOCK_TAG) {
+      branch[1] = true;
       return unlockTag();
     } else if (tag == UNLOCK_AND_SEAL_TAG) {
+      branch[2] = true;
       return unlockAndSealTag();
     } else if (tag == SEAL_TAG) {
+      branch[3] = true;
       return sealTag();
     } else {
+      branch[4] = true;
       throw new IllegalStateException("Unknown tag: " + tag);
     }
   }
