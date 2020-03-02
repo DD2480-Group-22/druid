@@ -20,6 +20,7 @@
 package org.apache.druid.java.util.common;
 
 import com.google.common.collect.ImmutableList;
+import org.apache.druid.java.util.common.granularity.CoverageTool;
 import org.apache.druid.java.util.common.granularity.Granularities;
 import org.apache.druid.java.util.common.granularity.Granularity;
 import org.apache.druid.java.util.common.granularity.GranularityType;
@@ -30,6 +31,7 @@ import org.joda.time.IllegalFieldValueException;
 import org.joda.time.Interval;
 import org.joda.time.Period;
 import org.joda.time.chrono.ISOChronology;
+import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -50,6 +52,7 @@ public class GranularityTest
   final Granularity WEEK = Granularities.WEEK;
   final Granularity MONTH = Granularities.MONTH;
   final Granularity YEAR = Granularities.YEAR;
+
 
   @Test
   public void testHiveFormat()
@@ -762,6 +765,7 @@ public class GranularityTest
     );
   }
 
+  //fromPeriod Tests:
   @Test
   public void testCustomNestedPeriodFail()
   {
@@ -774,6 +778,67 @@ public class GranularityTest
       // pass
     }
   }
+////////////////////////////////////////////
+  @Test
+  public void testPeriodMinutePass10()
+  {
+    try {
+      Period p = Period.minutes(10);
+      GranularityType t = GranularityType.fromPeriod(p);
+      Assert.assertEquals(GranularityType.TEN_MINUTE, t);
+    }
+    catch (IAE e) {
+      // pass
+    }
+  }
+
+  @Test
+  public void testPeriodQuarterPass()
+  {
+    try {
+      Period p = Period.months(3);
+      GranularityType t = GranularityType.fromPeriod(p);
+      Assert.assertEquals(GranularityType.QUARTER, t);
+    }
+    catch (IAE e) {
+      // pass
+    }
+  }
+
+  @Test
+  public void testPeriodMinutesPass30()
+  {
+    try {
+      Period p = Period.minutes(30);
+      GranularityType t = GranularityType.fromPeriod(p);
+      Assert.assertEquals(GranularityType.THIRTY_MINUTE, t);
+    }
+    catch (IAE e) {
+      // pass
+    }
+  }
+
+  @Test
+  public void testPeriodMinutesPass5()
+  {
+    try {
+      Period p = Period.minutes(5);
+      GranularityType t = GranularityType.fromPeriod(p);
+      Assert.assertEquals(GranularityType.FIVE_MINUTE, t);
+    }
+    catch (IAE e) {
+      // pass
+    }
+  }
+
+  @AfterClass
+  public static void print() 
+  { 
+    CoverageTool.getResult1();
+    CoverageTool.getResult2();
+  }
+
+////////////////////////////////////////
 
   @Test // Regression test for https://github.com/apache/druid/issues/5200.
   public void testIncrementOverSpringForward()

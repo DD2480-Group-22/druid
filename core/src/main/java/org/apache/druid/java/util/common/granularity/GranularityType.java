@@ -114,6 +114,7 @@ public enum GranularityType
     this.dateValuePositions = dateValuePositions;
     this.period = new Period(period);
     this.defaultGranularity = new PeriodGranularity(this.period, null, null);
+ 
   }
 
   GranularityType(GranularityType granularityType, String period)
@@ -181,54 +182,74 @@ public enum GranularityType
     return false;
   }
 
+
+
   public static GranularityType cases1(int index, int[] vals, Period period)
   {  
     switch (index) {
       case 0:
+        CoverageTool.setBranch1(1);
         return GranularityType.YEAR;
       case 2:
+        CoverageTool.setBranch1(2);
         return GranularityType.WEEK;
       case 3:
+        CoverageTool.setBranch1(3);
         return GranularityType.DAY;
       case 6:
+        CoverageTool.setBranch1(4);
         return GranularityType.SECOND;
       default:
+        CoverageTool.setBranch1(0);
         break;
     }
     throw new IAE("Granularity is not supported. [%s]", period);
   }
 
   public static GranularityType cases2(int index, int[] vals, Period period)
-  { 
+  {
     switch (index) {
       case 1:
         if (vals[index] == 3) {
+          CoverageTool.setBranch2(1);
           return GranularityType.QUARTER;
         } else if (vals[index] == 1) {
+          CoverageTool.setBranch2(2);
           return GranularityType.MONTH;
         }
+        CoverageTool.setBranch2(3);
         break;
       case 4:
         if (vals[index] == 6) {
+          CoverageTool.setBranch2(4);
           return GranularityType.SIX_HOUR;
         } else if (vals[index] == 1) {
+          CoverageTool.setBranch2(5);
           return GranularityType.HOUR;
         }
+        CoverageTool.setBranch2(6);
         break;
       case 5:
         if (vals[index] == 30) {
+          CoverageTool.setBranch2(7);
           return GranularityType.THIRTY_MINUTE;
         } else if (vals[index] == 15) {
+          CoverageTool.setBranch2(8);
           return GranularityType.FIFTEEN_MINUTE;
         } else if (vals[index] == 10) {
+          CoverageTool.setBranch2(9);
           return GranularityType.TEN_MINUTE;
         } else if (vals[index] == 5) {
+          CoverageTool.setBranch2(10);
           return GranularityType.FIVE_MINUTE;
         } else if (vals[index] == 1) {
+          CoverageTool.setBranch2(11);
           return GranularityType.MINUTE;
         }
+        CoverageTool.setBranch2(12);
         break;
       default:
+        CoverageTool.setBranch2(0);
         break;
     }
     throw new IAE("Granularity is not supported. [%s]", period);
